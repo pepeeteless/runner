@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.botao{
+    position: absolute;
+    width: 40%;
+    height: 150px;
+    left: 767px;
+    bottom: 550px;
+    border: 8px solid rgb(61, 55, 53);
+    
+}
+
+#resetar{
+    width:100%;
+    height: 100%; 
+    font-size: 50px;
+    font-family: 'Georgia', serif;
+    color: #F5F5DC;
+    background-image: linear-gradient(	#80614d,rgb(30, 20, 10));
+}
+
+#resetar:hover{
+    background-image: linear-gradient(	#ad8e79,rgb(91, 62, 33));
+}
+
+.pontuacao{
+    position: absolute;
+    width: 40%;
+    height: 150px;
+    left: 153px;
+    bottom: 550px;
+    border: 8px solid rgb(61, 55, 53);
+
+    text-align: left;
+    font-size: 80px;
+    font-family: 'Georgia', serif;
+    color: #F5F5DC;
+    background-image: linear-gradient(	#80614d,rgb(30, 20, 10));
+    padding: 10px;
+}
+
+.gameBoard{
+
+    position: relative;
+    border: 8px solid rgb(61, 55, 53) ;
+    width: 80%;
+    height: 250px;
+    margin: 200px auto;
+    background-image: linear-gradient(	#80614d,rgb(30, 20, 10));
+    overflow: hidden;
+}
+
+.slime{
+position: absolute;
+bottom: -50px;
+left: 0;
+height: 150px;
+
+}
+
+.jump{ 
+    animation: jump 800ms ease-out ;
+}
+
+/* left 569 ate -157 */
+.obstaculo{
+    position: absolute;
+    height: 175px;
+    bottom: 0;
+    top: 130px;
+    animation: obstaculo-animation 1.5s linear infinite;
+}
+
+@keyframes jump{
+
+    0%{
+        bottom: -50px;
+    }
+
+    40%{
+        bottom: 40px;
+    }
+
+    50%{
+        bottom: 40px;
+    }
+
+    60%{
+        bottom: 40px;
+    }
+
+    100%{
+        bottom: -50px;
+    }
+
+}
+
+@keyframes obstaculo-animation{
+    from{
+        left: 1175px;
+    }
+
+    to {
+        left: -157px;
+    }
+}
